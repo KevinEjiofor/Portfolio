@@ -23,16 +23,15 @@ export function ProfessionalHero() {
               <div className="space-y-3 sm:space-y-4">
                 <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
                   <span className="text-gray-900 dark:text-white block">Hello, I'm</span>
-                  <span className="text-blue-600 dark:text-blue-400 block">Alex Chen</span>
+                  <span className="text-blue-600 dark:text-blue-400 block">Ejiofor E. Kevin</span>
                 </h1>
 
                 <h2 className="text-lg sm:text-xl lg:text-2xl text-gray-600 dark:text-gray-300 font-medium">
-                  Senior Software Engineer
+                  Software Engineer
                 </h2>
 
                 <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400 leading-relaxed max-w-xl mx-auto lg:mx-0">
-                  I build scalable web applications and digital solutions that drive business growth. With 5+ years of
-                  experience, I specialize in modern JavaScript frameworks and cloud technologies.
+                      A passionate software engineer with a keen eye for crafting efficient solutions. I specialize in Java, Python, JavaScript, and modern frameworks like Spring Boot, Django, Flask, and Node.js to build robust backend systems and intuitive frontend applications. I thrive on dissecting complex problems, finding elegant solutions, and implementing them in a way that enhances user experience. I'm committed to collaborative teamwork and always eager to engage in meaningful conversations about software development.
                 </p>
               </div>
             </div>
@@ -41,11 +40,11 @@ export function ProfessionalHero() {
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 sm:gap-6 text-sm text-gray-600 dark:text-gray-400">
               <div className="flex items-center gap-2">
                 <MapPin className="w-4 h-4 flex-shrink-0" />
-                <span>San Francisco, CA</span>
+                <span>Lagos Nigeria</span>
               </div>
               <div className="flex items-center gap-2">
                 <Calendar className="w-4 h-4 flex-shrink-0" />
-                <span>5+ Years Experience</span>
+                <span>3+ Years Experience</span>
               </div>
             </div>
 
@@ -80,10 +79,10 @@ export function ProfessionalHero() {
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-100 to-blue-50 dark:from-blue-900/20 dark:to-blue-800/20 rounded-full" />
 
                 {/* Photo */}
-                <div className="absolute inset-3 sm:inset-4 rounded-full overflow-hidden bg-gray-100 dark:bg-gray-800 shadow-xl">
+                <div className="absolute inset-3 sm:inset-4 rounded-full overflow-hidden bg-gray-100 dark:bg-neutral-900 shadow-xl">
                   <Image
                     src="/placeholder.svg?height=400&width=400&text=Your+Professional+Photo"
-                    alt="Alex Chen - Software Engineer"
+                    alt="Ejiofor E. Kevin - Software Engineer"
                     fill
                     className="object-cover"
                     priority
@@ -93,14 +92,14 @@ export function ProfessionalHero() {
                 {/* Decorative Elements */}
                 <div className="absolute -top-2 sm:-top-4 -right-2 sm:-right-4 w-16 h-16 sm:w-20 sm:h-20 bg-blue-600 dark:bg-blue-500 rounded-full flex items-center justify-center text-white font-bold text-sm sm:text-lg shadow-lg">
                   <div className="text-center">
-                    <div>5+</div>
+                    <div>3+</div>
                     <div className="text-xs">YRS</div>
                   </div>
                 </div>
 
-                <div className="absolute -bottom-2 sm:-bottom-4 -left-2 sm:-left-4 bg-white dark:bg-gray-800 rounded-2xl p-3 sm:p-4 shadow-lg border border-gray-200 dark:border-gray-700">
+                <div className="absolute -bottom-2 sm:-bottom-4 -left-2 sm:-left-4 bg-white dark:bg-neutral-900 rounded-2xl p-3 sm:p-4 shadow-lg border border-gray-200 dark:border-neutral-800">
                   <div className="text-center">
-                    <div className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white">50+</div>
+                    <div className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white">30+</div>
                     <div className="text-xs text-gray-600 dark:text-gray-400">Projects</div>
                   </div>
                 </div>

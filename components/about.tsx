@@ -31,7 +31,7 @@ export function About() {
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">About Me</h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            I'm a passionate software engineer with 5+ years of experience building web applications that make a
+            I'm a passionate software engineer with 3+ years of experience building web applications that make a
             difference. I love turning ideas into reality through code and am always eager to learn new technologies.
           </p>
         </div>
@@ -41,13 +41,14 @@ export function About() {
             <h3 className="text-2xl font-semibold mb-6">My Journey</h3>
             <div className="space-y-4 text-muted-foreground">
               <p>
-                Started my journey in computer science at UC Berkeley, where I discovered my passion for creating
-                digital solutions that solve real-world problems.
+                Started my journey in computer science at Abia State Polytechnic, then deepened my expertise at
+                Semicolon Africa with an Express and Diploma in Software Engineering, where I discovered my passion
+                for creating digital solutions that solve real-world problems.
               </p>
               <p>
-                Over the years, I've worked with startups and established companies, contributing to products used by
-                millions of users. I specialize in full-stack development with a focus on React, Node.js, and cloud
-                technologies.
+                Over the past 3 years, I've worked with startups and established companies, contributing to products
+                used by millions of users. I specialize in full-stack development with a focus on Spring Boot, React,
+                Node.js, and cloud technologies.
               </p>
               <p>
                 When I'm not coding, you'll find me contributing to open-source projects, mentoring junior developers,

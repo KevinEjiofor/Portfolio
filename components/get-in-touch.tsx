@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Badge } from "@/components/ui/badge"
-import { Mail, Phone, MapPin, Send, Linkedin, Github } from "lucide-react"
+import {Mail, MapPin, Send, Linkedin, Github, Phone} from "lucide-react"
 
 export function GetInTouch() {
   const [formData, setFormData] = useState({
@@ -34,19 +34,19 @@ export function GetInTouch() {
     {
       icon: Mail,
       label: "Email",
-      value: "alex.chen@email.com",
-      href: "mailto:alex.chen@email.com",
+      value: "ejioforkelvin@gmail.com",
+      href: "mailto:ejioforkelvin@gmail.com",
     },
     {
       icon: Phone,
       label: "Phone",
-      value: "+1 (555) 123-4567",
-      href: "tel:+15551234567",
+      value: "+2347037455194",
+      href: "tel:+2347037455194",
     },
     {
       icon: MapPin,
       label: "Location",
-      value: "San Francisco, CA",
+      value: "Lagos State, Nigeria",
       href: "#",
     },
   ]
@@ -55,12 +55,12 @@ export function GetInTouch() {
     {
       icon: Github,
       label: "GitHub",
-      href: "https://github.com/alexchen",
+      href: "https://github.com/KevinEjiofor",
     },
     {
       icon: Linkedin,
       label: "LinkedIn",
-      href: "https://linkedin.com/in/alexchen",
+      href: "https://linkedin.com/in/kevin-ejiofor-476487283",
     },
   ]
 
@@ -94,7 +94,7 @@ export function GetInTouch() {
               {contactInfo.map((info, index) => (
                 <div
                   key={index}
-                  className="flex items-center gap-3 sm:gap-4 p-3 sm:p-4 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700"
+                  className="flex items-center gap-3 sm:gap-4 p-3 sm:p-4 rounded-lg bg-gray-50 dark:bg-neutral-900 border border-gray-200 dark:border-neutral-800"
                 >
                   <div className="w-8 h-8 sm:w-10 sm:h-10 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center">
                     <info.icon className="w-4 h-4 sm:w-5 sm:h-5 text-blue-600 dark:text-blue-400" />
@@ -134,7 +134,7 @@ export function GetInTouch() {
           </div>
 
           {/* Contact Form */}
-          <Card className="border-gray-200 dark:border-gray-700">
+          <Card className="border-gray-200 dark:border-neutral-800">
             <CardHeader className="pb-4 sm:pb-6">
               <CardTitle className="text-gray-900 dark:text-white text-lg sm:text-xl">Send a Message</CardTitle>
             </CardHeader>

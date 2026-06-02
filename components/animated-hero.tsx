@@ -14,7 +14,7 @@ export function AnimatedHero() {
   const [imageError, setImageError] = useState(false)
   const { theme } = useTheme()
   const { settings, prefersReducedMotion } = useAccessibility()
-  const fullText = "Alex Chen"
+  const fullText = "Ejiofor E. Kevin"
 
   // You can easily change this to your own image URL
   const profileImage = "/placeholder.svg?height=200&width=200&text=Your+Photo"
@@ -76,7 +76,7 @@ export function AnimatedHero() {
                   {!imageError ? (
                     <Image
                       src={profileImage || "/placeholder.svg"}
-                      alt="Alex Chen - Software Engineer"
+                      alt="Ejiofor E. Kevin - Software Engineer"
                       fill
                       className="object-cover transition-transform duration-300 group-hover:scale-110"
                       onError={() => setImageError(true)}

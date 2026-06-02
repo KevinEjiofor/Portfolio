@@ -4,7 +4,7 @@ import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 
 export const metadata: Metadata = {
-  title: "Alex Chen - Senior Software Engineer",
+  title: "Ejiofor E. Kevin - Senior Software Engineer",
   description: "Senior Software Engineer specializing in full-stack development and modern web technologies",
   generator: "v0.dev",
 }

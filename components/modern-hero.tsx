@@ -48,7 +48,7 @@ export function ModernHero() {
             <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
               <span className="block text-gray-300">Hello, I'm</span>
               <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                Alex Chen
+                Ejiofor E. Kevin
               </span>
             </h1>
 
@@ -113,7 +113,7 @@ export function ModernHero() {
                 <div className="w-80 h-80 rounded-full overflow-hidden relative">
                   <Image
                     src="/placeholder.svg?height=320&width=320&text=Your+Photo"
-                    alt="Alex Chen"
+                    alt="Ejiofor E. Kevin"
                     fill
                     className="object-cover"
                     priority
@@ -127,14 +127,14 @@ export function ModernHero() {
             {/* Floating Stats */}
             <div className="absolute -top-4 -right-4 bg-slate-800/90 backdrop-blur-sm rounded-2xl p-4 border border-gray-700">
               <div className="text-center">
-                <div className="text-2xl font-bold text-cyan-400">5+</div>
+                <div className="text-2xl font-bold text-cyan-400">3+</div>
                 <div className="text-xs text-gray-400">Years Exp</div>
               </div>
             </div>
 
             <div className="absolute -bottom-4 -left-4 bg-slate-800/90 backdrop-blur-sm rounded-2xl p-4 border border-gray-700">
               <div className="text-center">
-                <div className="text-2xl font-bold text-purple-400">50+</div>
+                <div className="text-2xl font-bold text-purple-400">30+</div>
                 <div className="text-xs text-gray-400">Projects</div>
               </div>
             </div>

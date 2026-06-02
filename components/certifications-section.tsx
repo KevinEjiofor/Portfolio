@@ -70,7 +70,7 @@ export function CertificationsSection() {
       case "Expiring Soon":
         return "bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-400"
       default:
-        return "bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-300"
+        return "bg-gray-100 text-gray-800 dark:bg-neutral-900 dark:text-gray-300"
     }
   }
 
@@ -83,7 +83,7 @@ export function CertificationsSection() {
       case "Expert":
         return "bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-400"
       default:
-        return "bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-300"
+        return "bg-gray-100 text-gray-800 dark:bg-neutral-900 dark:text-gray-300"
     }
   }
 
@@ -93,7 +93,7 @@ export function CertificationsSection() {
   return (
     <section
       id="certifications"
-      className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-800/50"
+      className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-neutral-950/60"
     >
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-8 sm:mb-12 lg:mb-16">
@@ -110,7 +110,7 @@ export function CertificationsSection() {
 
         {/* Stats Overview */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 mb-8 sm:mb-12">
-          <Card className="border-gray-200 dark:border-gray-700 text-center">
+          <Card className="border-gray-200 dark:border-neutral-800 text-center">
             <CardContent className="p-4 sm:p-6">
               <div className="flex items-center justify-center mb-3 sm:mb-4">
                 <Award className="w-6 h-6 sm:w-8 sm:h-8 text-blue-600 dark:text-blue-400" />
@@ -122,7 +122,7 @@ export function CertificationsSection() {
             </CardContent>
           </Card>
 
-          <Card className="border-gray-200 dark:border-gray-700 text-center">
+          <Card className="border-gray-200 dark:border-neutral-800 text-center">
             <CardContent className="p-4 sm:p-6">
               <div className="flex items-center justify-center mb-3 sm:mb-4">
                 <CheckCircle className="w-6 h-6 sm:w-8 sm:h-8 text-green-600 dark:text-green-400" />
@@ -134,7 +134,7 @@ export function CertificationsSection() {
             </CardContent>
           </Card>
 
-          <Card className="border-gray-200 dark:border-gray-700 text-center sm:col-span-1 col-span-1">
+          <Card className="border-gray-200 dark:border-neutral-800 text-center sm:col-span-1 col-span-1">
             <CardContent className="p-4 sm:p-6">
               <div className="flex items-center justify-center mb-3 sm:mb-4">
                 <Star className="w-6 h-6 sm:w-8 sm:h-8 text-yellow-600 dark:text-yellow-400" />
@@ -150,11 +150,11 @@ export function CertificationsSection() {
         {/* Certifications Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 mb-8 sm:mb-12 lg:mb-16">
           {certifications.map((cert, index) => (
-            <Card key={index} className="border-gray-200 dark:border-gray-700 hover:shadow-lg transition-shadow group">
+            <Card key={index} className="border-gray-200 dark:border-neutral-800 hover:shadow-lg transition-shadow group">
               <CardHeader className="pb-3 sm:pb-4">
                 <div className="flex items-start gap-3 sm:gap-4">
                   {/* Certification Logo */}
-                  <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gray-100 dark:bg-gray-800 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gray-100 dark:bg-neutral-900 rounded-lg flex items-center justify-center flex-shrink-0">
                     <Image
                       src={cert.logo || "/placeholder.svg"}
                       alt={`${cert.issuer} logo`}
@@ -214,7 +214,7 @@ export function CertificationsSection() {
                       <Badge
                         key={skillIndex}
                         variant="secondary"
-                        className="text-xs bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 px-2 py-1"
+                        className="text-xs bg-gray-100 dark:bg-neutral-900 text-gray-700 dark:text-gray-300 px-2 py-1"
                       >
                         {skill}
                       </Badge>
@@ -223,7 +223,7 @@ export function CertificationsSection() {
                 </div>
 
                 {/* Credential Info */}
-                <div className="pt-3 sm:pt-4 border-t border-gray-200 dark:border-gray-700">
+                <div className="pt-3 sm:pt-4 border-t border-gray-200 dark:border-neutral-800">
                   <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
                     <div className="text-xs text-gray-500 dark:text-gray-400">
                       <span className="font-medium">Credential ID:</span> {cert.credentialId}
@@ -248,7 +248,7 @@ export function CertificationsSection() {
 
         {/* Call to Action */}
         <div className="text-center">
-          <div className="bg-white dark:bg-gray-800 rounded-xl sm:rounded-2xl p-6 sm:p-8 border border-gray-200 dark:border-gray-700">
+          <div className="bg-white dark:bg-neutral-900 rounded-xl sm:rounded-2xl p-6 sm:p-8 border border-gray-200 dark:border-neutral-800">
             <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold text-gray-900 dark:text-white mb-3 sm:mb-4">
               Continuous Learning & Growth
             </h3>

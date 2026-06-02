@@ -1,77 +1,95 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Progress } from "@/components/ui/progress"
+import { Code2, Server, Layout, Smartphone, Database, Cloud, ShieldCheck, Wrench } from "lucide-react"
 
 export function ExpertiseSection() {
   const skillCategories = [
     {
-      title: "Frontend Development",
+      title: "Programming Languages",
+      icon: Code2,
+      gradient: "from-blue-500 to-cyan-500",
+      skills: ["JavaScript", "TypeScript", "Java", "Python", "Go", "Rust", "Dart", "PHP"],
+    },
+    {
+      title: "Backend",
+      icon: Server,
+      gradient: "from-emerald-500 to-teal-500",
       skills: [
-        { name: "React & Next.js", level: 95 },
-        { name: "TypeScript", level: 90 },
-        { name: "Tailwind CSS", level: 88 },
-        { name: "Vue.js", level: 82 },
+        "Spring Boot",
+        "Spring",
+        "Django",
+        "Express.js",
+        "Node.js",
+        "Axum",
+        "Actix Web",
+        "NestJS",
+        "Laravel",
       ],
     },
     {
-      title: "Backend Development",
-      skills: [
-        { name: "Node.js", level: 92 },
-        { name: "Python", level: 85 },
-        { name: "PostgreSQL", level: 88 },
-        { name: "GraphQL", level: 80 },
-      ],
+      title: "Frontend",
+      icon: Layout,
+      gradient: "from-pink-500 to-rose-500",
+      skills: ["Next.js", "React.js", "Vue.js", "Angular", "Material UI", "HTML", "CSS", "Tailwind"],
+    },
+    {
+      title: "Mobile",
+      icon: Smartphone,
+      gradient: "from-violet-500 to-purple-500",
+      skills: ["Flutter", "React Native"],
+    },
+    {
+      title: "Database",
+      icon: Database,
+      gradient: "from-amber-500 to-orange-500",
+      skills: ["MongoDB", "MySQL", "Neon", "PostgreSQL", "Prisma", "Supabase"],
     },
     {
       title: "Cloud & DevOps",
+      icon: Cloud,
+      gradient: "from-sky-500 to-indigo-500",
       skills: [
-        { name: "AWS", level: 87 },
-        { name: "Docker", level: 85 },
-        { name: "CI/CD", level: 90 },
-        { name: "Kubernetes", level: 75 },
+        "Docker",
+        "GitHub Actions",
+        "AWS",
+        "Railway",
+        "Render",
+        "Vercel",
+        "CI/CD Pipelines",
+        "Jenkins",
       ],
     },
     {
-      title: "Tools & Practices",
-      skills: [
-        { name: "Git", level: 95 },
-        { name: "Testing (Jest/Cypress)", level: 88 },
-        { name: "Agile/Scrum", level: 90 },
-        { name: "System Design", level: 85 },
-      ],
+      title: "Authentication & APIs",
+      icon: ShieldCheck,
+      gradient: "from-red-500 to-pink-500",
+      skills: ["Clerk", "JWT", "OAuth2", "REST APIs", "GraphQL", "WebSockets"],
+    },
+    {
+      title: "Tools",
+      icon: Wrench,
+      gradient: "from-lime-500 to-green-500",
+      skills: ["Git", "GitHub", "Postman", "Swagger", "CodeRabbit", "Greptile"],
     },
   ]
 
-  const technologies = [
-    "JavaScript",
-    "TypeScript",
-    "React",
-    "Next.js",
-    "Vue.js",
-    "Node.js",
-    "Python",
-    "PostgreSQL",
-    "MongoDB",
-    "AWS",
-    "Docker",
-    "Kubernetes",
-    "GraphQL",
-    "REST APIs",
-    "Tailwind CSS",
-    "Git",
-    "Jest",
-    "Cypress",
-  ]
-
   return (
-    <section id="expertise" className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8">
+    <section
+      id="expertise"
+      className="relative py-16 sm:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden"
+    >
+      {/* Decorative background */}
+      <div className="pointer-events-none absolute inset-0 -z-10">
+        <div className="absolute top-1/4 -left-24 h-72 w-72 rounded-full bg-blue-500/10 blur-3xl" />
+        <div className="absolute bottom-0 right-0 h-72 w-72 rounded-full bg-purple-500/10 blur-3xl" />
+      </div>
+
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12 sm:mb-16">
           <Badge variant="outline" className="mb-4">
             Technical Expertise
           </Badge>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">
-            Skills & Technologies
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight bg-gradient-to-r from-gray-900 via-gray-700 to-gray-900 dark:from-white dark:via-gray-300 dark:to-white bg-clip-text text-transparent mb-4 sm:mb-6">
+            Skills &amp; Technologies
           </h2>
           <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
             A comprehensive toolkit built through years of hands-on experience and continuous learning
@@ -79,45 +97,43 @@ export function ExpertiseSection() {
         </div>
 
         {/* Skills Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-12 sm:mb-16">
-          {skillCategories.map((category, index) => (
-            <Card key={index} className="border-gray-200 dark:border-gray-700">
-              <CardHeader className="pb-3 sm:pb-4">
-                <CardTitle className="text-base sm:text-lg text-gray-900 dark:text-white">{category.title}</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-3 sm:space-y-4">
-                {category.skills.map((skill, skillIndex) => (
-                  <div key={skillIndex} className="space-y-2">
-                    <div className="flex justify-between items-center">
-                      <span className="text-xs sm:text-sm font-medium text-gray-700 dark:text-gray-300">
-                        {skill.name}
-                      </span>
-                      <span className="text-xs text-gray-500 dark:text-gray-400">{skill.level}%</span>
-                    </div>
-                    <Progress value={skill.level} className="h-1.5 sm:h-2" />
-                  </div>
-                ))}
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-
-        {/* Technologies */}
-        <div className="text-center">
-          <h3 className="text-lg sm:text-xl font-semibold text-gray-900 dark:text-white mb-6 sm:mb-8">
-            Technologies I Work With
-          </h3>
-          <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
-            {technologies.map((tech, index) => (
-              <Badge
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
+          {skillCategories.map((category, index) => {
+            const Icon = category.icon
+            return (
+              <div
                 key={index}
-                variant="secondary"
-                className="px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+                className="group relative rounded-2xl p-[1px] bg-gradient-to-br from-gray-200 to-gray-100 dark:from-white/10 dark:to-white/5 hover:from-transparent hover:to-transparent transition-all duration-300"
               >
-                {tech}
-              </Badge>
-            ))}
-          </div>
+                {/* Animated gradient border on hover */}
+                <span
+                  className={`pointer-events-none absolute inset-0 rounded-2xl bg-gradient-to-br ${category.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-300`}
+                />
+                <div className="relative h-full rounded-2xl bg-white dark:bg-neutral-950 p-5 sm:p-6 transition-transform duration-300 group-hover:-translate-y-1">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div
+                      className={`flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br ${category.gradient} text-white shadow-lg shadow-black/5`}
+                    >
+                      <Icon className="h-5 w-5" />
+                    </div>
+                    <h3 className="text-base sm:text-lg font-semibold text-gray-900 dark:text-white">
+                      {category.title}
+                    </h3>
+                  </div>
+                  <div className="flex flex-wrap gap-2">
+                    {category.skills.map((skill, skillIndex) => (
+                      <span
+                        key={skillIndex}
+                        className="inline-flex items-center rounded-full border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/5 px-2.5 py-1 text-xs font-medium text-gray-700 dark:text-gray-300 hover:border-gray-300 dark:hover:border-white/20 hover:bg-gray-100 dark:hover:bg-white/10 transition-colors"
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            )
+          })}
         </div>
       </div>
     </section>

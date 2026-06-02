@@ -9,7 +9,7 @@ export function Hero() {
   const [text, setText] = useState("")
   const [showCursor, setShowCursor] = useState(true)
   const [imageError, setImageError] = useState(false)
-  const fullText = "Alex Chen"
+  const fullText = "Ejiofor E. Kevin"
 
   // You can easily change this to your own image URL
   const profileImage = "/placeholder.svg?height=200&width=200&text=Your+Photo"
@@ -60,7 +60,7 @@ export function Hero() {
                   {!imageError ? (
                     <Image
                       src={profileImage || "/placeholder.svg"}
-                      alt="Alex Chen - Software Engineer"
+                      alt="Ejiofor E. Kevin - Software Engineer"
                       fill
                       className="object-cover transition-transform duration-300 group-hover:scale-110"
                       onError={() => setImageError(true)}

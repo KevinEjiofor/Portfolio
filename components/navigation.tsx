@@ -54,21 +54,24 @@ export function Navigation() {
     <nav className="fixed top-0 w-full bg-background/80 backdrop-blur-md border-b z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <div className="font-bold text-xl">Alex Chen</div>
+          <div className="font-bold text-xl">Ejiofor E. Kevin</div>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            {navItems.map((item) => (
-              <button
-                key={item.id}
-                onClick={() => scrollToSection(item.id)}
-                className={`text-sm font-medium transition-colors hover:text-primary ${
-                  activeSection === item.id ? "text-primary" : "text-muted-foreground"
-                }`}
-              >
-                {item.label}
-              </button>
-            ))}
+           {/* Desktop Navigation */}
+           <div className="hidden md:flex items-center space-x-8">
+             {navItems.map((item) => (
+               <button
+                 key={item.id}
+                 onClick={() => scrollToSection(item.id)}
+                 className={`text-sm font-medium transition-colors relative pb-1 ${
+                   activeSection === item.id ? "text-primary" : "text-muted-foreground hover:text-primary"
+                 }`}
+               >
+                 {item.label}
+                 {activeSection === item.id && (
+                   <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-primary to-blue-400 dark:from-blue-400 dark:to-purple-400"></span>
+                 )}
+               </button>
+             ))}
             <Button
               variant="ghost"
               size="icon"
@@ -87,21 +90,26 @@ export function Navigation() {
           </Button>
         </div>
 
-        {/* Mobile Navigation Menu */}
-        {isOpen && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-background border-t">
-              {navItems.map((item) => (
-                <button
-                  key={item.id}
-                  onClick={() => scrollToSection(item.id)}
-                  className={`block px-3 py-2 text-base font-medium transition-colors hover:text-primary ${
-                    activeSection === item.id ? "text-primary" : "text-muted-foreground"
-                  }`}
-                >
-                  {item.label}
-                </button>
-              ))}
+         {/* Mobile Navigation Menu */}
+         {isOpen && (
+           <div className="md:hidden">
+             <div className="px-2 pt-2 pb-3 space-y-1 bg-background border-t">
+               {navItems.map((item) => (
+                 <button
+                   key={item.id}
+                   onClick={() => scrollToSection(item.id)}
+                   className={`block w-full text-left px-3 py-2 text-base font-medium transition-colors relative ${
+                     activeSection === item.id 
+                       ? "text-primary bg-primary/10 rounded-md" 
+                       : "text-muted-foreground hover:text-primary"
+                   }`}
+                 >
+                   {item.label}
+                   {activeSection === item.id && (
+                     <span className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-6 bg-gradient-to-b from-primary to-blue-400 dark:from-blue-400 dark:to-purple-400 rounded-r"></span>
+                   )}
+                 </button>
+               ))}
               <div className="px-3 py-2">
                 <Button
                   variant="ghost"

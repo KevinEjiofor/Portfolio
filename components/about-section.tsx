@@ -74,11 +74,11 @@ export function AboutSection() {
             {/* Quick Stats */}
             <div className="grid grid-cols-3 gap-4">
               <div className="text-center p-4 bg-slate-800/50 rounded-xl border border-gray-700">
-                <div className="text-2xl font-bold text-cyan-400">5+</div>
+                <div className="text-2xl font-bold text-cyan-400">3+</div>
                 <div className="text-sm text-gray-400">Years Experience</div>
               </div>
               <div className="text-center p-4 bg-slate-800/50 rounded-xl border border-gray-700">
-                <div className="text-2xl font-bold text-purple-400">50+</div>
+                <div className="text-2xl font-bold text-purple-400">30+</div>
                 <div className="text-sm text-gray-400">Projects Completed</div>
               </div>
               <div className="text-center p-4 bg-slate-800/50 rounded-xl border border-gray-700">

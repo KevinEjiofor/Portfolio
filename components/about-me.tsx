@@ -27,7 +27,7 @@ export function AboutMe() {
   ]
 
   return (
-    <section id="about" className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-800/50">
+    <section id="about" className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-neutral-950/60">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12 sm:mb-16">
           <Badge variant="outline" className="mb-4">
@@ -49,14 +49,15 @@ export function AboutMe() {
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">My Journey</h3>
               <div className="space-y-4 text-gray-600 dark:text-gray-400 text-sm sm:text-base">
                 <p>
-                  I began my career in software development after graduating from UC Berkeley with a degree in Computer
-                  Science. What started as curiosity about how things work has evolved into a passion for creating
-                  digital solutions that make a difference.
+                  I began my career in software development after graduating from Abia State Polytechnic with a degree
+                  in Computer Science, and then attended Semicolon Africa where I earned an Express and Diploma in
+                  Software Engineering. What started as curiosity about how things work has evolved into a passion for
+                  creating digital solutions that make a difference.
                 </p>
                 <p>
-                  Over the past 5 years, I've had the privilege of working with both startups and established companies,
+                  Over the past 3 years, I've had the privilege of working with both startups and established companies,
                   contributing to products that serve millions of users. I specialize in full-stack development with a
-                  particular focus on React, Node.js, and cloud technologies.
+                  particular focus on Spring Boot, React, Node.js, and cloud technologies.
                 </p>
                 <p>
                   When I'm not coding, I enjoy mentoring junior developers, contributing to open-source projects, and
@@ -66,13 +67,13 @@ export function AboutMe() {
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-4 sm:gap-6 pt-6 border-t border-gray-200 dark:border-gray-700">
+            <div className="grid grid-cols-3 gap-4 sm:gap-6 pt-6 border-t border-gray-200 dark:border-neutral-800">
               <div className="text-center">
-                <div className="text-xl sm:text-2xl font-bold text-blue-600 dark:text-blue-400">5+</div>
+                <div className="text-xl sm:text-2xl font-bold text-blue-600 dark:text-blue-400">3+</div>
                 <div className="text-xs sm:text-sm text-gray-600 dark:text-gray-400">Years Experience</div>
               </div>
               <div className="text-center">
-                <div className="text-xl sm:text-2xl font-bold text-blue-600 dark:text-blue-400">50+</div>
+                <div className="text-xl sm:text-2xl font-bold text-blue-600 dark:text-blue-400">30+</div>
                 <div className="text-xs sm:text-sm text-gray-600 dark:text-gray-400">Projects Completed</div>
               </div>
               <div className="text-center">
@@ -85,7 +86,7 @@ export function AboutMe() {
           {/* Right Content - Values */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
             {values.map((value, index) => (
-              <Card key={index} className="border-gray-200 dark:border-gray-700 hover:shadow-md transition-shadow">
+              <Card key={index} className="border-gray-200 dark:border-neutral-800 hover:shadow-md transition-shadow">
                 <CardContent className="p-4 sm:p-6">
                   <value.icon className="w-6 h-6 sm:w-8 sm:h-8 text-blue-600 dark:text-blue-400 mb-3 sm:mb-4" />
                   <h4 className="font-semibold text-gray-900 dark:text-white mb-2 text-sm sm:text-base">
