@@ -8,6 +8,7 @@ import { MagneticElement } from "@/components/magnetic-elements"
 import { useAccessibility } from "@/components/accessibility-provider"
 import Image from "next/image"
 
+
 export function AnimatedHero() {
   const [text, setText] = useState("")
   const [showCursor, setShowCursor] = useState(true)

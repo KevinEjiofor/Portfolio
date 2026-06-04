@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Download, Mail, MapPin, Calendar } from "lucide-react"
 import Image from "next/image"
+import Link from "next/link"
 
 export function ProfessionalHero() {
   return (
@@ -52,20 +53,30 @@ export function ProfessionalHero() {
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
               <Button
                 size="lg"
-                onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
+                asChild
                 className="bg-blue-600 hover:bg-blue-700 text-white w-full sm:w-auto"
               >
-                <Mail className="w-4 h-4 mr-2" />
-                Get In Touch
+                <Link href="/contact">
+                  <Mail className="w-4 h-4 mr-2" />
+                  Get In Touch
+                </Link>
               </Button>
 
               <Button
                 variant="outline"
                 size="lg"
+                asChild
                 className="border-gray-300 dark:border-gray-600 bg-transparent w-full sm:w-auto"
               >
-                <Download className="w-4 h-4 mr-2" />
-                Download Resume
+                <a
+                  href="/file/Ejiofor%20E.%20Kevin_resume.pdf.pdf"
+                  download="Ejiofor E. Kevin - Resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Download className="w-4 h-4 mr-2" />
+                  Download Resume
+                </a>
               </Button>
             </div>
           </div>
@@ -81,10 +92,12 @@ export function ProfessionalHero() {
                 {/* Photo */}
                 <div className="absolute inset-3 sm:inset-4 rounded-full overflow-hidden bg-gray-100 dark:bg-neutral-900 shadow-xl">
                   <Image
-                    src="/placeholder.svg?height=400&width=400&text=Your+Professional+Photo"
+                    src="/assets/profilePic.png"
                     alt="Ejiofor E. Kevin - Software Engineer"
                     fill
+                    sizes="(max-width: 640px) 256px, (max-width: 1024px) 320px, 384px"
                     className="object-cover"
+                    style={{ objectPosition: "center 30%" }}
                     priority
                   />
                 </div>

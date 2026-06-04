@@ -248,34 +248,55 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Native form controls and scrollbar follow the theme */
+:root {
+  color-scheme: light;
+}
+
+.dark {
+  color-scheme: dark;
+}
+
 /* Custom scrollbar */
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 8px;
+  height: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: rgb(243 244 246);
+  background: rgb(243 244 246); /* gray-100 */
 }
 
 .dark ::-webkit-scrollbar-track {
-  background: rgb(17 24 39);
+  background: rgb(0 0 0); /* black */
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgb(156 163 175);
-  border-radius: 3px;
+  background: rgb(156 163 175); /* gray-400 */
+  border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgb(107 114 128);
+  background: rgb(107 114 128); /* gray-500 */
 }
 
 .dark ::-webkit-scrollbar-thumb {
-  background: rgb(75 85 99);
+  background: rgb(38 38 38); /* neutral-800 */
 }
 
 .dark ::-webkit-scrollbar-thumb:hover {
-  background: rgb(107 114 128);
+  background: rgb(64 64 64); /* neutral-700 */
+}
+
+/* Firefox scrollbar */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(156 163 175) rgb(243 244 246);
+}
+
+.dark html,
+html.dark {
+  scrollbar-color: rgb(38 38 38) rgb(0 0 0);
 }
 
 /* Selection */
