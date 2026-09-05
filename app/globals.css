@@ -257,47 +257,31 @@ html {
   color-scheme: dark;
 }
 
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: rgb(243 244 246); /* gray-100 */
-}
-
-.dark ::-webkit-scrollbar-track {
-  background: rgb(0 0 0); /* black */
-}
-
-::-webkit-scrollbar-thumb {
-  background: rgb(156 163 175); /* gray-400 */
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: rgb(107 114 128); /* gray-500 */
-}
-
-.dark ::-webkit-scrollbar-thumb {
-  background: rgb(38 38 38); /* neutral-800 */
-}
-
-.dark ::-webkit-scrollbar-thumb:hover {
-  background: rgb(64 64 64); /* neutral-700 */
-}
-
-/* Firefox scrollbar */
+/* Hidden scrollbars.
+   The scrollbar chrome is removed everywhere while scrolling itself stays fully
+   functional (wheel, trackpad, touch, keyboard, and programmatic scrolling all work).
+   Reading position is shown by the side dot rail instead, which doubles as the
+   page-to-page navigation. */
 html {
-  scrollbar-width: thin;
-  scrollbar-color: rgb(156 163 175) rgb(243 244 246);
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* legacy Edge / IE */
 }
 
-.dark html,
-html.dark {
-  scrollbar-color: rgb(38 38 38) rgb(0 0 0);
+*,
+*::before,
+*::after {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  display: none; /* Chrome, Safari, Edge */
+}
+
+/* No gutter is reserved, so pages that scroll and pages that don't line up
+   at the same width instead of shifting by the scrollbar's thickness. */
 
 /* Selection */
 ::selection {
@@ -465,4 +449,14 @@ img {
   .space-y-6 > * + * {
     margin-top: 1rem;
   }
+}
+
+/* Protected certificate viewer: never printable, never draggable */
+@media print {
+  .cert-protected {
+    display: none !important;
+  }
+}
+.cert-protected canvas {
+  -webkit-user-drag: none;
 }

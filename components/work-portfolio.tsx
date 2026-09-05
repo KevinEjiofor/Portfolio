@@ -1,7 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { ExternalLink, Github, Apple, Smartphone } from "lucide-react"
+import { ExternalLink, Github, Apple, Smartphone, HeartPulse, Stethoscope } from "lucide-react"
 import Image from "next/image"
 
 export function WorkPortfolio() {
@@ -48,11 +48,11 @@ export function WorkPortfolio() {
     {
       title: "Vanly",
       description:
-        "UK-based logistics and van delivery platform connecting customers with verified drivers through real-time booking, live tracking, and payout management. React Native mobile apps with a Laravel backend, integrated with Yoti, DVLA, and Stripe.",
+        "UK-based logistics and van delivery platform connecting customers with verified drivers through real-time booking, live tracking, and payout management. React Native mobile apps with a Laravel backend, integrated with Yoti, DVLA, and Stripe. Released to the Apple App Store and Google Play.",
       image: "/assets/company-footer-logo0.svg",
       imageFit: "contain" as const,
       imageBg: "bg-black",
-      technologies: ["React Native", "Expo", "Laravel", "Stripe", "Google Maps API", "Docker", "AWS Amplify"],
+      technologies: ["React Native", "Expo", "Laravel", "Stripe", "Google Maps API", "Docker", "AWS Amplify", "App Store", "Google Play"],
       liveUrl: "https://vanlysystem.com/",
       githubUrl: "",
       category: "Mobile · Logistics",
@@ -73,7 +73,7 @@ export function WorkPortfolio() {
       image: "/assets/company-footer-logo0.svg",
       imageFit: "contain" as const,
       imageBg: "bg-black",
-      technologies: ["React Native", "Expo", "Laravel", "Yoti", "DVLA", "Stripe"],
+      technologies: ["React Native", "Expo", "Laravel", "Yoti", "DVLA", "Stripe", "App Store", "Google Play"],
       liveUrl: "https://apps.apple.com/gb/app/vanly-driver/id6760938420",
       githubUrl: "",
       category: "Mobile App",
@@ -92,14 +92,27 @@ export function WorkPortfolio() {
       ],
     },
     {
+      title: "Vanly Website",
+      description:
+        "Marketing landing page for the Vanly platform with a conversion-focused hero, how-it-works flow, van categories with load specs, driver recruitment, and App Store / Google Play download CTAs. Built with the Next.js App Router and deployed on AWS Amplify behind CloudFront.",
+      image: "/assets/company-footer-logo0.svg",
+      imageFit: "contain" as const,
+      imageBg: "bg-black",
+      technologies: ["Next.js", "React", "TypeScript", "CSS", "AWS Amplify", "CloudFront"],
+      liveUrl: "https://www.vanlysystem.com/",
+      githubUrl: "",
+      category: "Landing Page",
+      company: "Vanly",
+    },
+    {
       title: "Finarium",
       description:
-        "Digital banking and exchange platform with fintech infrastructure, payment integrations, and notification systems. Integrated Providus Bank, Interswitch, PRUNE, Rafiki, and VertoFX for local and cross-border transactions.",
+        "Digital banking and exchange platform with fintech infrastructure, payment integrations, and notification systems. Integrated Providus Bank, Interswitch, PRUNE, Rafiki, and VertoFX for local and cross-border transactions. Hosted on AWS and released to the Apple App Store and Google Play.",
       image: "/assets/Fibarium.png",
       imageFit: "contain" as const,
       imageBg: "bg-black",
       imagePadding: "p-3" as const,
-      technologies: ["Java", "Spring Boot", "PostgreSQL", "Redis", "JWT", "Docker", "VertoFX", "Interswitch"],
+      technologies: ["Java", "Spring Boot", "PostgreSQL", "Redis", "JWT", "Docker", "AWS", "VertoFX", "Interswitch", "App Store", "Google Play"],
       liveUrl: "https://thefinarium.com/login",
       githubUrl: "",
       category: "Fintech",
@@ -108,9 +121,9 @@ export function WorkPortfolio() {
     {
       title: "Shanono",
       description:
-        "Mobile-first digital wallet and payment app with secure authentication, real-time notifications, virtual account management, and FX settlement flows. Available on iOS and Android with reconciliation jobs and automated transaction monitoring.",
+        "Mobile-first digital wallet and payment app with secure authentication, real-time notifications, virtual account management, and FX settlement flows. Hosted on AWS and available on iOS and Android, with reconciliation jobs and automated transaction monitoring.",
       image: "/assets/shanonno.jpeg",
-      technologies: ["Java", "Spring Boot", "PostgreSQL", "Redis", "OneSignal", "Twilio", "Termii"],
+      technologies: ["Java", "Spring Boot", "PostgreSQL", "Redis", "AWS", "OneSignal", "Twilio", "Termii", "App Store", "Google Play"],
       liveUrl: "https://myshanonobank.com/",
       githubUrl: "",
       category: "Fintech · Mobile",
@@ -127,6 +140,60 @@ export function WorkPortfolio() {
           url: "https://play.google.com/store/apps/details?id=com.shanono_mmg.shanono_mobile&hl=en",
         },
       ],
+    },
+    {
+      title: "CosmicForge HealthNet",
+      description:
+        "Telemedicine platform connecting patients, doctors, pharmacies, and labs across Africa. Marketing site covering video, audio, and chat consultations, doctor availability and appointment tracking, self-service consultation pricing, subscription plans in USD and NGN, and prescriptions routed to partner pharmacies. Backed by a Node.js API containerised with Docker and shipped to Heroku through GitHub Actions CI/CD.",
+      image: "/assets/cos.png",
+      imageFit: "contain" as const,
+      imageBg: "bg-white",
+      imagePadding: "p-10" as const,
+      technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Node.js", "Docker", "GitHub Actions", "Heroku"],
+      liveUrl: "https://www.cosmicforge-healthnet.com",
+      githubUrl: "",
+      category: "HealthTech",
+      company: "CosmicForge HealthNet",
+    },
+    {
+      title: "CosmicForge Dashboard",
+      description:
+        "Patient and doctor portal for the CosmicForge network. Role-based registration switches the form by user type, adding specialty selection across 25 medical departments and international dialling codes for doctors, alongside Google OAuth sign-in and consultation management. Talks to a Node.js backend deployed to Heroku via Dockerised GitHub Actions pipelines.",
+      image: "/assets/cos.png",
+      imageFit: "contain" as const,
+      imageBg: "bg-white",
+      imagePadding: "p-10" as const,
+      technologies: ["Next.js", "React", "TypeScript", "OAuth", "Tailwind CSS", "Node.js", "Docker", "GitHub Actions", "Heroku"],
+      liveUrl: "https://dashboard.cosmicforge-healthnet.com/auth/register?user_type=patient",
+      githubUrl: "",
+      category: "Web Application",
+      company: "CosmicForge HealthNet",
+      portals: [
+        {
+          label: "Patient sign-up",
+          icon: HeartPulse,
+          url: "https://dashboard.cosmicforge-healthnet.com/auth/register?user_type=patient",
+        },
+        {
+          label: "Doctor sign-up",
+          icon: Stethoscope,
+          url: "https://dashboard.cosmicforge-healthnet.com/auth/register?user_type=doctor",
+        },
+      ],
+    },
+    {
+      title: "CosmicForge Lab Portal",
+      description:
+        "Laboratory portal for the CosmicForge network, handling digital test orders and result sharing between labs, doctors, and patients. Supports lab administrator accounts, invitation-based staff onboarding, and persistent sessions, served by the same Dockerised Node.js backend on Heroku.",
+      image: "/assets/cos.png",
+      imageFit: "contain" as const,
+      imageBg: "bg-white",
+      imagePadding: "p-10" as const,
+      technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Node.js", "Docker", "GitHub Actions", "Heroku"],
+      liveUrl: "https://lab.cosmicforge-healthnet.com/",
+      githubUrl: "",
+      category: "Lab Portal",
+      company: "CosmicForge HealthNet",
     },
   ]
 
@@ -245,6 +312,26 @@ export function WorkPortfolio() {
                     </Badge>
                   ))}
                 </div>
+
+                {project.portals && project.portals.length > 0 && (
+                  <div className="flex flex-wrap gap-2 pt-1">
+                    {project.portals.map((portal, portalIndex) => {
+                      const Icon = portal.icon
+                      return (
+                        <a
+                          key={portalIndex}
+                          href={portal.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1.5 rounded-full border border-blue-200 dark:border-blue-500/30 bg-blue-50 dark:bg-blue-500/10 px-3 py-1 text-xs font-medium text-blue-700 dark:text-blue-300 hover:bg-blue-100 dark:hover:bg-blue-500/20 transition-colors"
+                        >
+                          <Icon className="w-3.5 h-3.5" />
+                          {portal.label}
+                        </a>
+                      )
+                    })}
+                  </div>
+                )}
 
                 {project.stores && project.stores.length > 0 && (
                   <div className="flex flex-wrap gap-2 pt-1">

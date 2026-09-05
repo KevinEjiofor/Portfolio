@@ -6,6 +6,12 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
+  experimental: {
+    // Ship the private /certificates folder with the serverless bundle for the protected route.
+    outputFileTracingIncludes: {
+      "/api/certificates/[id]": ["./certificates/**/*"],
+    },
+  },
   images: {
     domains: ["placeholder.svg"],
     dangerouslyAllowSVG: true,
