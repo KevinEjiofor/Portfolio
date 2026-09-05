@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Download, Mail, MapPin, Calendar } from "lucide-react"
 import Image from "next/image"
+import { SocialLinks } from "@/components/brand-icons"
 import Link from "next/link"
 
 export function ProfessionalHero() {
@@ -79,6 +80,13 @@ export function ProfessionalHero() {
                 </a>
               </Button>
             </div>
+
+            {/* Profile links. rel="me" also tells search engines these accounts are mine. */}
+            <SocialLinks
+              className="mt-6 flex items-center justify-center gap-2 lg:justify-start"
+              iconClassName="h-5 w-5"
+              linkClassName="inline-flex h-11 w-11 items-center justify-center rounded-full border border-gray-300 text-gray-600 transition-colors hover:border-blue-600 hover:text-blue-600 dark:border-gray-600 dark:text-gray-400 dark:hover:border-blue-400 dark:hover:text-blue-400"
+            />
           </div>
 
           {/* Right Content - Professional Photo */}
@@ -92,13 +100,13 @@ export function ProfessionalHero() {
                 {/* Photo */}
                 <div className="absolute inset-3 sm:inset-4 rounded-full overflow-hidden bg-gray-100 dark:bg-neutral-900 shadow-xl">
                   <Image
-                    src="/assets/profilePic.png"
+                    src="/assets/profilePic.webp"
                     alt="Ejiofor E. Kevin - Software Engineer"
                     fill
+                    priority
                     sizes="(max-width: 640px) 256px, (max-width: 1024px) 320px, 384px"
                     className="object-cover"
                     style={{ objectPosition: "center 30%" }}
-                    priority
                   />
                 </div>
 

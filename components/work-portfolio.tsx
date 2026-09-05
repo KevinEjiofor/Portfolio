@@ -1,7 +1,8 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { ExternalLink, Github, Apple, Smartphone, HeartPulse, Stethoscope } from "lucide-react"
+import { ExternalLink, Apple, Smartphone, HeartPulse, Stethoscope } from "lucide-react"
+import { GitHubIcon } from "@/components/brand-icons"
 import Image from "next/image"
 
 export function WorkPortfolio() {
@@ -204,9 +205,9 @@ export function WorkPortfolio() {
           <Badge variant="outline" className="mb-4">
             Portfolio
           </Badge>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">
             Featured Projects
-          </h2>
+          </h1>
           <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
             Real-world products I've built and shipped — spanning fintech, logistics, and SaaS platforms across web and
             mobile.
@@ -264,7 +265,7 @@ export function WorkPortfolio() {
                             rel="noopener noreferrer"
                             onClick={(e) => e.stopPropagation()}
                           >
-                            <Github className="w-4 h-4 mr-2" />
+                            <GitHubIcon className="w-4 h-4 mr-2" />
                             Code
                           </a>
                         </Button>

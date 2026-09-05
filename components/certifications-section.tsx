@@ -169,9 +169,9 @@ export function CertificationsSection() {
           <Badge variant="outline" className="mb-4">
             Certifications
           </Badge>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">
             Credentials & Achievements
-          </h2>
+          </h1>
           <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
             Academic qualifications, professional programs and courses I have completed. Each certificate can be
             viewed in a watermarked, view-only viewer.

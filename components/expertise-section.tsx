@@ -99,9 +99,9 @@ export function ExpertiseSection() {
           <Badge variant="outline" className="mb-4">
             Technical Expertise
           </Badge>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight bg-gradient-to-r from-gray-900 via-gray-700 to-gray-900 dark:from-white dark:via-gray-300 dark:to-white bg-clip-text text-transparent mb-4 sm:mb-6">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight bg-gradient-to-r from-gray-900 via-gray-700 to-gray-900 dark:from-white dark:via-gray-300 dark:to-white bg-clip-text text-transparent mb-4 sm:mb-6">
             Skills &amp; Technologies
-          </h2>
+          </h1>
           <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
             A comprehensive toolkit built through years of hands-on experience and continuous learning
           </p>

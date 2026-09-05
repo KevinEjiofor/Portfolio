@@ -5,6 +5,7 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { Moon, Sun, Menu, X } from "lucide-react"
+import { SocialLinks } from "@/components/brand-icons"
 import { useTheme } from "next-themes"
 
 export function Header() {
@@ -88,8 +89,10 @@ export function Header() {
             })}
           </nav>
 
-          {/* Theme Toggle & Mobile Menu */}
-          <div className="flex items-center space-x-2 sm:space-x-4">
+          {/* Social, Theme Toggle & Mobile Menu */}
+          <div className="flex items-center gap-1 sm:gap-2">
+            <SocialLinks className="hidden lg:flex items-center gap-1 mr-1" iconClassName="h-[18px] w-[18px]" />
+
             <Button
               variant="ghost"
               size="icon"
@@ -133,6 +136,15 @@ export function Header() {
                   </Link>
                 )
               })}
+
+              <div className="mt-2 border-t border-gray-200 pt-2 dark:border-neutral-800">
+                <SocialLinks
+                  className="flex flex-col"
+                  iconClassName="h-[18px] w-[18px]"
+                  linkClassName="flex items-center rounded-md px-3 py-2 text-gray-600 transition-colors hover:bg-gray-50 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-neutral-900 dark:hover:text-white"
+                  withLabels
+                />
+              </div>
             </div>
           </div>
         )}

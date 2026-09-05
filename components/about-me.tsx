@@ -33,9 +33,9 @@ export function AboutMe() {
           <Badge variant="outline" className="mb-4">
             About Me
           </Badge>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">
             Building Digital Solutions That Matter
-          </h2>
+          </h1>
           <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
             I'm a passionate software engineer with a strong foundation in computer science and a proven track record of
             delivering high-quality applications that solve real-world problems.

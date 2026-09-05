@@ -164,9 +164,9 @@ export function CareerPath() {
           <Badge variant="outline" className="mb-4">
             Career Journey
           </Badge>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">
             Professional Experience
-          </h2>
+          </h1>
           <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
             My journey through different roles and companies, building expertise and delivering measurable impact
           </p>
