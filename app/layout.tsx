@@ -8,6 +8,11 @@ import { ScrollPageNavigator } from "@/components/scroll-page-navigator"
 import { StructuredData } from "@/components/structured-data"
 import { site, siteUrl } from "@/lib/site"
 
+const googleVerification = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION?.trim().replace(
+  /^google-site-verification=/,
+  "",
+)
+
 export const metadata: Metadata = {
   // Every relative URL below (canonicals, OG images) resolves against this.
   metadataBase: new URL(siteUrl),
@@ -71,11 +76,11 @@ export const metadata: Metadata = {
     },
   },
   category: "technology",
-  // Set NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION to the token Google Search Console gives
-  // you, then click Verify there. Without it the property stays unverified.
-  ...(process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
-    ? { verification: { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION } }
-    : {}),
+  // Set NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION to the token Search Console gives you,
+  // then click Verify there. Search Console shows the token two ways — bare in the
+  // HTML tag, and prefixed with "google-site-verification=" in the DNS TXT record —
+  // so the prefix is stripped here and either paste works.
+  ...(googleVerification ? { verification: { google: googleVerification } } : {}),
 }
 
 // Browser chrome (address bar, scrollbars, form controls) follows the active theme

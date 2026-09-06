@@ -5,21 +5,38 @@ export const runtime = "nodejs"
 export const dynamic = "force-dynamic"
 
 const MAX = { name: 100, email: 254, subject: 150, message: 5000 }
-// Simple in-memory throttle. Resets on redeploy, which is fine for a portfolio form.
-const RATE_LIMIT = { windowMs: 60 * 60 * 1000, max: 5 }
+
+// In-memory throttle, reset on redeploy. Per-IP alone is not enough: X-Forwarded-For
+// is attacker-controlled, so rotating it would otherwise allow unlimited mail. The
+// global cap bounds total sends per window no matter what headers arrive.
+const WINDOW_MS = 60 * 60 * 1000
+const PER_IP_MAX = 5
+const GLOBAL_MAX = 40
+
 const hits = new Map<string, number[]>()
+let globalHits: number[] = []
 
 function rateLimited(ip: string) {
   const now = Date.now()
-  const recent = (hits.get(ip) ?? []).filter((t) => now - t < RATE_LIMIT.windowMs)
-  if (recent.length >= RATE_LIMIT.max) return true
+  const fresh = (times: number[]) => times.filter((t) => now - t < WINDOW_MS)
+
+  globalHits = fresh(globalHits)
+  if (globalHits.length >= GLOBAL_MAX) return true
+
+  const recent = fresh(hits.get(ip) ?? [])
+  if (recent.length >= PER_IP_MAX) return true
+
   recent.push(now)
   hits.set(ip, recent)
+  globalHits.push(now)
   if (hits.size > 5000) hits.clear()
   return false
 }
 
 const isEmail = (v: string) => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v)
+// Strip CR/LF and other control characters so nothing user-supplied can smuggle
+// extra headers into the outgoing message.
+const stripControl = (v: string) => v.replace(/[\u0000-\u001f\u007f]/g, " ").trim()
 const escapeHtml = (v: string) =>
   v.replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]!)
 
@@ -70,7 +87,9 @@ export async function POST(req: NextRequest) {
     return Response.json({ error: "not_configured" }, { status: 503 })
   }
 
-  const heading = subject || "New portfolio message"
+  // name and subject reach the Subject / From headers, so they get scrubbed.
+  const safeName = stripControl(name)
+  const heading = stripControl(subject) || "New portfolio message"
   const res = await fetch("https://api.resend.com/emails", {
     method: "POST",
     headers: { Authorization: `Bearer ${apiKey}`, "Content-Type": "application/json" },
@@ -79,9 +98,9 @@ export async function POST(req: NextRequest) {
       to: [site.email],
       reply_to: email,
       subject: `[Portfolio] ${heading}`,
-      text: `From: ${name} <${email}>\nSubject: ${heading}\n\n${message}`,
+      text: `From: ${safeName} <${email}>\nSubject: ${heading}\n\n${message}`,
       html:
-        `<p><strong>From:</strong> ${escapeHtml(name)} &lt;${escapeHtml(email)}&gt;</p>` +
+        `<p><strong>From:</strong> ${escapeHtml(safeName)} &lt;${escapeHtml(email)}&gt;</p>` +
         `<p><strong>Subject:</strong> ${escapeHtml(heading)}</p><hr>` +
         `<p style="white-space:pre-wrap">${escapeHtml(message)}</p>`,
     }),

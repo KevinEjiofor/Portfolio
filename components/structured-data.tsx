@@ -60,8 +60,9 @@ export function StructuredData() {
   return (
     <script
       type="application/ld+json"
-      // Server-rendered constant, no user input reaches this string.
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(graph) }}
+      // Server-rendered constant, but '<' is escaped anyway so no value can ever
+      // terminate the <script> block early.
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(graph).replace(/</g, "\\u003c") }}
     />
   )
 }
