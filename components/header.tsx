@@ -12,7 +12,14 @@ export function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [mounted, setMounted] = useState(false)
-  const { theme, setTheme } = useTheme()
+  const { resolvedTheme, systemTheme, setTheme } = useTheme()
+
+  // Picking the theme the OS already uses clears the override, so the site
+  // goes back to following the system setting.
+  const toggleTheme = () => {
+    const next = resolvedTheme === "dark" ? "light" : "dark"
+    setTheme(next === systemTheme ? "system" : next)
+  }
   const pathname = usePathname()
 
   const navItems = [
@@ -96,7 +103,7 @@ export function Header() {
             <Button
               variant="ghost"
               size="icon"
-              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+              onClick={toggleTheme}
               className="w-9 h-9 hover:bg-gray-100 dark:hover:bg-neutral-900"
               aria-label="Toggle theme"
             >

@@ -46,7 +46,7 @@ export function ProfessionalHero() {
               </div>
               <div className="flex items-center gap-2">
                 <Calendar className="w-4 h-4 flex-shrink-0" />
-                <span>3+ Years Experience</span>
+                <span>7+ Years Experience</span>
               </div>
             </div>
 
@@ -70,8 +70,8 @@ export function ProfessionalHero() {
                 className="border-gray-300 dark:border-gray-600 bg-transparent w-full sm:w-auto"
               >
                 <a
-                  href="/file/Ejiofor%20E.%20Kevin_resume.pdf.pdf"
-                  download="Ejiofor E. Kevin - Resume.pdf"
+                  href="/file/Ejiofor_Kevin_Resume.pdf"
+                  download="Ejiofor_Kevin_Resume.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -113,7 +113,7 @@ export function ProfessionalHero() {
                 {/* Decorative Elements */}
                 <div className="absolute -top-2 sm:-top-4 -right-2 sm:-right-4 w-16 h-16 sm:w-20 sm:h-20 bg-blue-600 dark:bg-blue-500 rounded-full flex items-center justify-center text-white font-bold text-sm sm:text-lg shadow-lg">
                   <div className="text-center">
-                    <div>3+</div>
+                    <div>7+</div>
                     <div className="text-xs">YRS</div>
                   </div>
                 </div>

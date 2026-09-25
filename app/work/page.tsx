@@ -5,12 +5,12 @@ import type { Metadata } from "next"
 export const metadata: Metadata = {
   title: "Work",
   description:
-    "Products Ejiofor E. Kevin has built and shipped, including Vanly logistics apps, Finarium and Shanono fintech platforms, CosmicForge HealthNet telemedicine, and the Spark Strand SaaS suite.",
+    "Products Ejiofor E. Kevin has built and shipped, including Vanly logistics apps, Finarium and Shanono fintech platforms, CosmicForge HealthNet telemedicine, Leverpay crypto payments, and the Spark Strand SaaS suite.",
   alternates: { canonical: "/work" },
   openGraph: {
     title: "Work — Ejiofor E. Kevin",
     description:
-      "Products Ejiofor E. Kevin has built and shipped, including Vanly logistics apps, Finarium and Shanono fintech platforms, CosmicForge HealthNet telemedicine, and the Spark Strand SaaS suite.",
+      "Products Ejiofor E. Kevin has built and shipped, including Vanly logistics apps, Finarium and Shanono fintech platforms, CosmicForge HealthNet telemedicine, Leverpay crypto payments, and the Spark Strand SaaS suite.",
     url: "/work",
   },
 }

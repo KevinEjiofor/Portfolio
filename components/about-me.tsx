@@ -55,7 +55,7 @@ export function AboutMe() {
                   creating digital solutions that make a difference.
                 </p>
                 <p>
-                  Over the past 3 years, I've had the privilege of working with both startups and established companies,
+                  Over the past 7 years, I've had the privilege of working with both startups and established companies,
                   contributing to products that serve millions of users. I specialize in full-stack development with a
                   particular focus on Spring Boot, React, Node.js, and cloud technologies.
                 </p>
@@ -69,7 +69,7 @@ export function AboutMe() {
             {/* Stats */}
             <div className="grid grid-cols-3 gap-4 sm:gap-6 pt-6 border-t border-gray-200 dark:border-neutral-800">
               <div className="text-center">
-                <div className="text-xl sm:text-2xl font-bold text-blue-600 dark:text-blue-400">3+</div>
+                <div className="text-xl sm:text-2xl font-bold text-blue-600 dark:text-blue-400">7+</div>
                 <div className="text-xs sm:text-sm text-gray-600 dark:text-gray-400">Years Experience</div>
               </div>
               <div className="text-center">

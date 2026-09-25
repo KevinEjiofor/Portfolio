@@ -2,9 +2,12 @@
 // Sent on every response. `frame-ancestors 'none'` is the clickjacking defence;
 // Next.js injects inline hydration scripts and Tailwind emits inline styles, so
 // 'unsafe-inline' is required here without a nonce-issuing middleware.
+// `next dev` evaluates its bundles with eval(); production builds do not.
+const isDev = process.env.NODE_ENV !== "production"
+
 const contentSecurityPolicy = [
   "default-src 'self'",
-  "script-src 'self' 'unsafe-inline'",
+  `script-src 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ""}`,
   "style-src 'self' 'unsafe-inline'",
   // blob: is needed by the certificate viewer, which paints a fetched blob onto a canvas.
   "img-src 'self' data: blob:",
@@ -14,7 +17,8 @@ const contentSecurityPolicy = [
   "base-uri 'self'",
   "object-src 'none'",
   "frame-ancestors 'none'",
-  "upgrade-insecure-requests",
+  // Local dev is served over plain http.
+  ...(isDev ? [] : ["upgrade-insecure-requests"]),
 ].join("; ")
 
 const securityHeaders = [

@@ -47,6 +47,19 @@ export function WorkPortfolio() {
       company: "Spark Strand",
     },
     {
+      title: "The Growth Machine",
+      description:
+        "Lead pipeline and business growth platform covering the full lead lifecycle: business leads and contacts with outreach tracking, automatic import of newly registered UK companies from Companies House, and job postings from companies in the pipeline. Adds email and ad campaign management, newsletter subscribers, scheduled social media posts and comments, article publishing with peer review, AI-powered SEO keyword research, and analytics reporting.",
+      image: "/assets/emblem.png",
+      imageFit: "contain" as const,
+      imageBg: "bg-black",
+      technologies: ["React", "Vite", "Supabase", "Resend", "Tailwind CSS"],
+      liveUrl: "https://marketing.sparkstrand.com",
+      githubUrl: "",
+      category: "Marketing · CRM",
+      company: "Spark Strand",
+    },
+    {
       title: "Vanly",
       description:
         "UK-based logistics and van delivery platform connecting customers with verified drivers through real-time booking, live tracking, and payout management. React Native mobile apps with a Laravel backend, integrated with Yoti, DVLA, and Stripe. Released to the Apple App Store and Google Play.",
@@ -196,6 +209,19 @@ export function WorkPortfolio() {
       category: "Lab Portal",
       company: "CosmicForge HealthNet",
     },
+    {
+      title: "Leverpay",
+      description:
+        "Cross-platform crypto payments product delivered across a web platform, landing page, and mobile application. Led the frontend and mobile team within a 10+ person engineering team, implemented the mobile app's wallet and payment flows, integrated with the backend and cloud teams strictly through versioned API contracts, and owned end-to-end QA from backend services through to the web and mobile experience before each release.",
+      image: "/assets/leverpay.png",
+      imageFit: "contain" as const,
+      imageBg: "bg-black",
+      technologies: ["Crypto Payments", "Web Platform", "Mobile App", "REST APIs", "QA Testing"],
+      liveUrl: "https://lever-pay.com/",
+      githubUrl: "",
+      category: "Crypto · Fintech",
+      company: "Leverpay",
+    },
   ]
 
   return (
@@ -209,7 +235,7 @@ export function WorkPortfolio() {
             Featured Projects
           </h1>
           <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-            Real-world products I've built and shipped — spanning fintech, logistics, and SaaS platforms across web and
+            Real-world products I've built and shipped — spanning fintech, crypto, logistics, healthtech, and SaaS platforms across web and
             mobile.
           </p>
         </div>

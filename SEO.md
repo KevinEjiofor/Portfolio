@@ -61,5 +61,3 @@ Indexing is not instant. Expect days to a few weeks before a name search finds t
 
 - Add the site link to your GitHub profile README and the LinkedIn "Website" field.
   Those two are the strongest signal that the site belongs to you.
-- Refresh `public/file/Ejiofor E. Kevin_resume.pdf.pdf`. The current file is dated 1 June
-  and predates the CosmicForge work now shown on the site.

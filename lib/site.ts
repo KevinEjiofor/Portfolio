@@ -28,7 +28,7 @@ export const site = {
   jobTitle: "Software Engineer",
   tagline: "Software Engineer — full-stack, backend and cloud",
   description:
-    "Ejiofor E. Kevin is a software engineer with 3+ years building full-stack products across fintech, logistics, healthtech and SaaS. Java and Spring Boot, Node.js, Next.js and React, React Native, on AWS, Google Cloud and Heroku.",
+    "Ejiofor E. Kevin is a software engineer with 7+ years building full-stack products across fintech, logistics, healthtech and SaaS. Java and Spring Boot, Node.js, Next.js and React, React Native, on AWS, Google Cloud and Heroku.",
   email: "ejioforkelvin@gmail.com",
   location: { city: "Lagos", country: "NG", countryName: "Nigeria" },
   image: "/assets/profilePic.webp",
